@@ -59,7 +59,7 @@ const AccountValidation = () => {
     const key = process.env.REACT_APP_LOCATE_SERVICE_KEY;
     const { accountNumber, sortCode } = inputs;
 
-    let params = `?Key=${key}&AccountNumbers=${accountNumber}&SortCodes=${sortCode}`;
+    let params = `?Key=${key}&AccountNumber=${accountNumber}&SortCode=${sortCode}`;
 
     const response = await Axios.post(`json3.ws${params}`);
     console.log(response.data);
@@ -82,7 +82,7 @@ const AccountValidation = () => {
       } else {
         setOpen(true);
         setSeverity("success");
-        setMessage(response.data.Items[0].Description);
+        setMessage("This is a valid account");
       }
     }
   };

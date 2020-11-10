@@ -73,7 +73,7 @@ const CardForm = () => {
       <div className={classes.paper}>
         <form onSubmit={handleSubmit}>
           <label>
-            Card details
+            § Card details
             <CardElement
               options={options}
               onReady={() => {
